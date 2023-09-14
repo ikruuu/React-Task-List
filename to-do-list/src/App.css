@@ -8,7 +8,51 @@
   align-items: center;
   justify-content: center;
 }
-.Container{
-  width: 400px;
+
+.Container {
+  width: 500px;
   height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list {
+  outline: none;
+  border: none;
+  cursor: default;
+}
+
+.task-list {
+  width: 280px;
+  list-style: none;
+  border: black 1px solid;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-size: 30px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.task-button {
+  cursor: pointer;
+}
+
+.complete-button {
+  background-color: green;
+}
+
+.edit-button {
+  background-color: yellow;
+}
+
+.delete-button {
+  background-color: red;
 }
