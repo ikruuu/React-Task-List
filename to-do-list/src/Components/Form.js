@@ -18,21 +18,24 @@ const Form = ({ input, setInput, tasks, setTasks, editTask, setEditTask }) => {
     }
     return (
 
-        <div className='form'>
-            <form className='form__container' onSubmit={onFormSubmit}>
-
+        <div className=''>
+            <form className='w-50 h-20' onSubmit={onFormSubmit}>
+                
                 <input
+                    className="outline-0"
                     type='text'
                     placeholder='Insira uma nova tarefa'
-                    className='input__form'
                     value={input}
                     required onChange={onInputChange} />
 
                 <button
-                    className='button__form'
+                    className="bg-blue-500 p-3.5 rounded hover:cursor-pointer hover:bg-blue-400 transition text-cyan-50"
                     type='submit'>Adicionar</button>
 
             </form>
+
+            <hr className=''></hr>
+
         </div>
     )
 }

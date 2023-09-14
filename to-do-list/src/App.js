@@ -24,7 +24,7 @@ function App() {
           setEditTasks={setEditTasks}
         />
 
-
+        
 
         <Taks
           tasks={tasks}
