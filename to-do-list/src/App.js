@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Formulario from './Components/Form';
 import React, { useState } from 'react';

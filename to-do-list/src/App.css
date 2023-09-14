@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   width: 100vw;
   height: 100vh;
@@ -24,33 +28,31 @@
 }
 
 .task-list {
-  width: 280px;
   list-style: none;
   border: black 1px solid;
-  height: 30px;
   display: flex;
   align-items: center;
-  padding-left: 20px;
-  font-size: 30px;
+  padding: 6px;
   border-radius: 20px;
   margin-top: 10px;
 }
 
 .buttons {
   display: flex;
-  gap: 5px;
+  gap: 10px;
 }
 
 .task-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  width: 30px;
+  height: 20px;
 }
 
 .complete-button {
   background-color: green;
-}
-
-.edit-button {
-  background-color: yellow;
 }
 
 .delete-button {
