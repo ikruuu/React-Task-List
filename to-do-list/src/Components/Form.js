@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
 import '../App.css'
 import { v4 as uuidv4 } from "uuid";
 
 
-const Form = ({ input, setInput, tasks, setTasks, editTask, setEditTask }) => {
+const Form = ({ input, setInput, tasks, setTasks}) => {
 
     const onInputChange = (event) => {
         setInput(event.target.value);
@@ -18,18 +17,19 @@ const Form = ({ input, setInput, tasks, setTasks, editTask, setEditTask }) => {
     }
     return (
 
-        <div className=''>
+        <div className='gap-20'>
             <form className='w-50 h-20' onSubmit={onFormSubmit}>
                 
                 <input
-                    className="outline-0"
+                    className="rounded-full outline-0 p-3 border-2 border-blue-500 "
                     type='text'
                     placeholder='Insira uma nova tarefa'
                     value={input}
-                    required onChange={onInputChange} />
+                    required onChange={onInputChange} 
+                />
 
                 <button
-                    className="bg-blue-500 p-3.5 rounded hover:cursor-pointer hover:bg-blue-400 transition text-cyan-50"
+                    className="outline-0 mx-7 border-collapse bg-blue-500 p-3.5 rounded hover:cursor-pointer hover:bg-blue-400 transition text-cyan-50"
                     type='submit'>Adicionar</button>
 
             </form>
