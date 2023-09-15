@@ -1,6 +1,5 @@
 import React from "react";
 import '../App.css'
-
 const Taks = ({ tasks, setTasks, setEditTasks }) => {
 
     const taskDelete = ({ id }) => {
@@ -11,8 +10,8 @@ const Taks = ({ tasks, setTasks, setEditTasks }) => {
         setTasks(
             tasks.map((item) => {
                 if (item.id === todo.id) {
-                    alert('Tarefa completa');
-                };
+                    alert('Tarefa completa')
+                }
                 return item;
             })
         )
@@ -24,21 +23,19 @@ const Taks = ({ tasks, setTasks, setEditTasks }) => {
         <div className="Tarefas">
 
             {tasks.map((todo) => (
-
-                <li className="list-none flex my-5 items-center rounded border-2 px-8 py-2" key={todo.id}>
+                <li className="border-blue-500  bg-gradient-to-r from-cyan-500 to-blue-500 border rounded flex items-center p-6 mt-10 list-none " key={todo.id}>
 
                     <input
                         type="text"
                         value={todo.title}
-                        className="outline-0 cursor-default"
-                        onChange={(event) => event.preventDefault()} 
-                    />
+                        className="outline-0 border-none cursor-default bg-gradient-to-r from-cyan-500 to-blue-500 text-white"
+                        onChange={(event) => event.preventDefault()} />
 
-                    <div className="flex gap-1">
+                    <div className="flex justify-items-end">
 
-                        <button className="" onClick={() => taskComplete(todo)}>
+                        <button className="flex text-white rounded p-3 transition hover:bg-green-500" onClick={() => taskComplete(todo)}>
                             
-                            <svg className="stroke-green-400" 
+                            <svg className="stroke-green-300" 
                                 xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 24 24"><g>
                                 <path d="M15.811,10.399c0.45-0.46-0.25-1.17-0.71-0.71l-3.56,3.56c-0.58-0.58-1.16-1.16-1.73-1.73
                                  c-0.46-0.46-1.17,0.25-0.71,0.71l2.08,2.08c0.2,0.19,0.52,0.19,0.71,0L15.811,10.399z"/>
@@ -50,7 +47,7 @@ const Taks = ({ tasks, setTasks, setEditTasks }) => {
 
                         </button>
 
-                        <button className="" onClick={() => taskDelete(todo)}>
+                        <button className="flex hover:stroke-red-200 rounded p-3 transition hover:bg-red-700" onClick={() => taskDelete(todo)}>
                         
                             <svg className="stroke-red-500" 
                                 xmlns="http://www.w3.org/2000/svg" width="32px" height="32px"  viewBox="0 0 24 24"><g>
@@ -64,7 +61,7 @@ const Taks = ({ tasks, setTasks, setEditTasks }) => {
                                 z"/>
                                 </g>
                             </svg>
-
+                        
                         </button>
                     </div>
                 </li>
